@@ -38,9 +38,9 @@ def install():
                  python_requires='>=3.4.*',
                  install_requires = install_requires,
                  extras_require=extras_require,
-                 packages=find_packages(exclude=['astroid.tests']),
-                 test_suite='test',
+                 packages=find_packages(exclude=['astroid.tests']) + ['astroid.brain'],
                  setup_requires=['pytest-runner'],
+                 test_suite='test',
                  tests_require=['pytest'],
                  )
 
